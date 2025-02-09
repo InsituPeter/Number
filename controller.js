@@ -7,11 +7,10 @@ const cache = new Map();
 const getNumberProperties = async (req, res) => {
     const number = req.query.number;
     const num = parseInt(number);
-
-    if (isNaN(num)) {
-        return res.status(400).json({ error: "Invalid input. Please enter a valid integer." });
-    }
-
+    
+    if (!number || isNaN(number) || !Number.isInteger(Number(number))) {
+        return res.status(400).json({ number, error: "true" })
+      }
     // Check cache for previous results
     if (cache.has(num)) {
         return res.status(200).json(cache.get(num));
