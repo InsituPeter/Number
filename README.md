@@ -23,8 +23,8 @@ The **Number Properties API** allows users to query numerical properties, such a
 
 ### **1. Clone the Repository**
 ```sh
-git clone <your-repo-url>
-cd <your-project-folder>
+git clone https://github.com/InsituPeter/Number.git
+cd Number
 ```
 
 ### **2. Install Dependencies**
