@@ -9,7 +9,7 @@ const getNumberProperties = async (req, res) => {
     const num = parseInt(number);
     
     if (!number || isNaN(number) || !Number.isInteger(Number(number))) {
-        return res.status(400).json({ number, error: "true" })
+        return res.status(400).json({ number: typeof number, error: "true" })
       }
     // Check cache for previous results
     if (cache.has(num)) {
